@@ -1,0 +1,21 @@
+{
+  "_comment": "Раздел «Спасибо» (страница холста «Спасибо · обновления»). Только настоящие люди — примеры с холста (Аня Ветрова и др.) не показывать. Новых добавляет владелец; порядок — как в списке. Фото не обрезать: в круге аватара и на профиле — уменьшенная копия целиком (photoSmall), полное — photo.",
+  "musicians": [
+    {
+      "id": "timur-daurov",
+      "name": "Тимур Дауров",
+      "subtitle": "создатель Truver",
+      "thanks": "Спасибо за создание Truver",
+      "photo": "timur-daurov.jpg",
+      "links": [
+        {
+          "kind": "instagram",
+          "handle": "drv_tim",
+          "url": "https://instagram.com/drv_tim"
+        }
+      ],
+      "photoSmall": "timur-daurov-small.jpg"
+    }
+  ],
+  "partners": []
+}

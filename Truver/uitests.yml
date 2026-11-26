@@ -1,0 +1,35 @@
+# UI tests that walk through every screen on a device or simulator (owned by the review agent).
+targets:
+  TruverUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources:
+      - path: UITests
+    dependencies:
+      - target: Truver
+    settings:
+      base:
+        DEVELOPMENT_TEAM: XQ35SJRLQH
+        CODE_SIGN_STYLE: Automatic
+        PRODUCT_BUNDLE_IDENTIFIER: app.truver.ios.uitests
+        SWIFT_VERSION: "5.0"
+        GENERATE_INFOPLIST_FILE: YES
+        TEST_TARGET_NAME: Truver
+        TARGETED_DEVICE_FAMILY: "1"
+schemes:
+  TruverUITests:
+    build:
+      targets:
+        Truver: all
+        TruverUITests: [test]
+    test:
+      targets:
+        - TruverUITests
+  Truver:
+    build:
+      targets:
+        Truver: all
+    run:
+      config: Debug
+    archive:
+      config: Release

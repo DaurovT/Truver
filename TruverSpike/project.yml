@@ -1,0 +1,48 @@
+name: TruverSpike
+options:
+  bundleIdPrefix: app.truver
+  deploymentTarget:
+    iOS: "17.0"
+    macOS: "14.0"
+  createIntermediateGroups: true
+
+packages:
+  TruverCore:
+    path: ../TruverCore
+
+targets:
+  TruverSpike:
+    type: application
+    supportedDestinations: [iOS, macOS]
+    sources:
+      - path: Sources
+    dependencies:
+      - package: TruverCore
+        product: TruverTheory
+      - package: TruverCore
+        product: TruverDSP
+      - package: TruverCore
+        product: TruverAudio
+    info:
+      path: Sources/Info.plist
+      properties:
+        CFBundleDisplayName: Truver Spike
+        CFBundleShortVersionString: "0.1"
+        CFBundleVersion: "1"
+        NSMicrophoneUsageDescription: "Микрофон нужен только тюнеру и проверке игры. Звук не записывается и не покидает устройство."
+        UIBackgroundModes: [audio]
+        UILaunchScreen: {}
+        UIApplicationSupportsIndirectInputEvents: true
+        UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait, UIInterfaceOrientationLandscapeLeft, UIInterfaceOrientationLandscapeRight]
+        LSApplicationCategoryType: public.app-category.music
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: app.truver.spike
+        SWIFT_VERSION: "6.0"
+        GENERATE_INFOPLIST_FILE: NO
+        TARGETED_DEVICE_FAMILY: "1"
+        SUPPORTS_MACCATALYST: NO
+        CODE_SIGN_STYLE: Automatic
+        DEVELOPMENT_TEAM: XQ35SJRLQH  # PHARMIQ ACADEMY, MChJ
+        ENABLE_HARDENED_RUNTIME: YES
+        "CODE_SIGN_ENTITLEMENTS[sdk=macosx*]": Sources/TruverSpike-macOS.entitlements

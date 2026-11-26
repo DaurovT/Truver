@@ -1,0 +1,25 @@
+{
+  "_comment": "Screenshot fixture ONLY: the invented people of the canvas boards ThanksMusicians / ThanksPartners / ThanksProfile / ThanksOffline / ThanksLargeText, to compare the layout pixel by pixel. Never bundled: iOS loads it with the DEBUG launch argument `-thanksFixture <path>`, Flutter in test/screens/thanks_test.dart.",
+  "musicians": [
+    {"id": "anya", "name": "Аня Ветрова", "subtitle": "гитаристка · прог-метал · Ташкент", "thanks": "Спасибо за обзор Truver на YouTube",
+     "links": [{"kind": "youtube", "handle": "anyavetrova", "url": "https://youtube.com"}, {"kind": "instagram", "handle": "anya.riffs", "url": "https://instagram.com"}, {"kind": "telegram", "handle": "anyariffs", "url": "https://t.me"}]},
+    {"id": "den", "name": "Ден Ростов", "subtitle": "8-струнная · джент · Алматы",
+     "links": [{"kind": "tiktok", "handle": "den8string", "url": "https://tiktok.com"}, {"kind": "youtube", "handle": "den", "url": "https://youtube.com"}]},
+    {"id": "marta", "name": "Marta Silva", "subtitle": "бас · фьюжн · Лиссабон",
+     "links": [{"kind": "instagram", "handle": "marta", "url": "https://instagram.com"}, {"kind": "spotify", "handle": "marta", "url": "https://spotify.com"}]},
+    {"id": "ilya", "name": "Илья Громов", "subtitle": "преподаватель гитары · Бишкек",
+     "links": [{"kind": "telegram", "handle": "ilya", "url": "https://t.me"}, {"kind": "site", "handle": "ilya.kg", "url": "https://example.com"}]},
+    {"id": "sasha", "name": "Саша Ким", "subtitle": "вокал и гитара · Самарканд",
+     "links": [{"kind": "instagram", "handle": "sasha", "url": "https://instagram.com"}]}
+  ],
+  "partners": [
+    {"id": "rifflab", "name": "Riff Lab", "subtitle": "музыкальная школа · Алматы", "kind": "school",
+     "links": [{"kind": "instagram", "handle": "rifflab", "url": "https://instagram.com"}, {"kind": "site", "handle": "rifflab.kz", "url": "https://example.com"}]},
+    {"id": "struna", "name": "Струна", "subtitle": "магазин инструментов · Ташкент", "kind": "shop",
+     "links": [{"kind": "telegram", "handle": "struna", "url": "https://t.me"}, {"kind": "instagram", "handle": "struna", "url": "https://instagram.com"}]},
+    {"id": "backline", "name": "Backline Fest", "subtitle": "фестиваль · Бишкек", "kind": "festival",
+     "links": [{"kind": "instagram", "handle": "backline", "url": "https://instagram.com"}, {"kind": "site", "handle": "backline.kg", "url": "https://example.com"}]},
+    {"id": "lad", "name": "Гитарный канал «Лад»", "subtitle": "Telegram-канал · 48 тыс.", "kind": "channel",
+     "links": [{"kind": "telegram", "handle": "lad", "url": "https://t.me"}]}
+  ]
+}

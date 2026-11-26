@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Launch (canvas «Экран запуска», as on iOS): the empty tuner frame — dial, string slots, tab bar — at its point
+     size (390 × 844 dp, the board's render at 3×), centred on the app background (#0a0b0d). Android 12+ shows the
+     system splash (icon) instead; the frame then appears only on older versions. -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@color/truver_background" />
+    <item>
+        <bitmap android:gravity="center" android:src="@drawable/launch_skeleton" />
+    </item>
+</layer-list>

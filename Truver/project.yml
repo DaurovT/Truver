@@ -1,0 +1,96 @@
+name: Truver
+include:
+  - uitests.yml
+options:
+  bundleIdPrefix: app.truver
+  deploymentTarget:
+    iOS: "17.0"
+    macOS: "14.0"
+  createIntermediateGroups: true
+  developmentLanguage: ru
+
+packages:
+  TruverCore:
+    path: ../TruverCore
+
+targets:
+  Truver:
+    type: application
+    supportedDestinations: [iOS, macOS]
+    sources:
+      - path: Sources
+      - path: Resources
+      - path: Shared
+    dependencies:
+      - target: TruverWidgets
+        destinationFilters: [iOS]
+      - package: TruverCore
+        product: TruverTheory
+      - package: TruverCore
+        product: TruverDSP
+      - package: TruverCore
+        product: TruverAudio
+    info:
+      path: Sources/Info.plist
+      properties:
+        CFBundleDisplayName: Truver
+        CFBundleShortVersionString: "1.0"
+        CFBundleVersion: "1"
+        NSMicrophoneUsageDescription: "Микрофон нужен только тюнеру и проверке игры. Звук не записывается и не покидает устройство."
+        UIBackgroundModes: [audio]
+        NSSupportsLiveActivities: true
+        # Canvas «Экран запуска»: the empty tuner frame (dial, string slots, tab bar) — the board's render at 3×,
+        # shown at its point size (390 × 844), centred on the background colour on other screen sizes.
+        UILaunchScreen:
+          UIColorName: LaunchBackground
+          UIImageName: LaunchSkeleton
+          UIImageRespectsSafeAreaInsets: false
+        UIApplicationSupportsIndirectInputEvents: true
+        UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait, UIInterfaceOrientationLandscapeLeft, UIInterfaceOrientationLandscapeRight]
+        UIUserInterfaceStyle: Dark
+        LSApplicationCategoryType: public.app-category.music
+        UIAppFonts: [Inter-ExtraLight.ttf, Inter-Light.ttf, Inter-Regular.ttf, Inter-Medium.ttf, Inter-SemiBold.ttf, Inter-Bold.ttf]
+        ATSApplicationFontsPath: "."
+        ITSAppUsesNonExemptEncryption: false
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: app.truver.ios
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        SWIFT_VERSION: "6.0"
+        GENERATE_INFOPLIST_FILE: NO
+        TARGETED_DEVICE_FAMILY: "1"
+        SUPPORTS_MACCATALYST: NO
+        CODE_SIGN_STYLE: Automatic
+        DEVELOPMENT_TEAM: XQ35SJRLQH  # PHARMIQ ACADEMY, MChJ
+        ENABLE_HARDENED_RUNTIME: YES
+        "CODE_SIGN_ENTITLEMENTS[sdk=macosx*]": Sources/Truver-macOS.entitlements
+        "CODE_SIGN_ENTITLEMENTS[sdk=iphoneos*]": Sources/Truver-iOS.entitlements
+        "CODE_SIGN_ENTITLEMENTS[sdk=iphonesimulator*]": Sources/Truver-iOS.entitlements
+
+  TruverWidgets:
+    type: app-extension
+    platform: iOS
+    sources:
+      - path: Widgets
+      - path: Shared
+      - path: Resources/Fonts
+        buildPhase: resources
+    info:
+      path: Widgets/Info.plist
+      properties:
+        CFBundleDisplayName: Truver
+        CFBundleShortVersionString: "1.0"
+        CFBundleVersion: "1"
+        NSExtension:
+          NSExtensionPointIdentifier: com.apple.widgetkit-extension
+        UIAppFonts: [Inter-ExtraLight.ttf, Inter-Light.ttf, Inter-Regular.ttf, Inter-Medium.ttf, Inter-SemiBold.ttf, Inter-Bold.ttf]
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: app.truver.ios.widgets
+        SWIFT_VERSION: "6.0"
+        GENERATE_INFOPLIST_FILE: NO
+        TARGETED_DEVICE_FAMILY: "1"
+        CODE_SIGN_STYLE: Automatic
+        DEVELOPMENT_TEAM: XQ35SJRLQH
+        SKIP_INSTALL: YES
+        CODE_SIGN_ENTITLEMENTS: Widgets/TruverWidgets.entitlements

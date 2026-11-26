@@ -1,0 +1,69 @@
+# name | launch arguments (added to: -resetSettings -skipOnboarding -template g8-standard-fs -muteAudio)
+tuner_idle | -tab tuner -tunerDemo waiting
+tuner_flat | -tab tuner -tunerDemo flat
+tuner_sharp | -tab tuner -tunerDemo sharp
+tuner_chromatic | -tab tuner -tunerDemo chromatic
+tuner_manual | -tab tuner -tunerDemo manual
+tuner_sharpnote | -tab tuner -tunerDemo sharpNote
+tuner_listening | -tab tuner -tunerDemo listening
+tuner_outofrange | -tab tuner -tunerDemo outOfRange
+tuner_noaccess | -tab tuner -tunerDemo noAccess
+tuner_done | -tab tuner -tunerDemo done
+tuner_reference | -tab tuner -tunerDemo reference
+tuner_stage | -tab tuner -tunerDemo flat -tunerStage
+tuner_intonation | -tab tuner -sheet intonation
+metro_stopped | -tab metronome
+metro_demo | -tab metronome -metroDemo
+metro_playing | -tab metronome -metroDemo -metroPlay
+metro_figures | -tab metronome -beatFigures
+metro_meter | -tab metronome -sheet metroMeter
+metro_modes | -tab metronome -sheet metroModes
+metro_params | -tab metronome -metroDemo -sheet metroParams
+metro_fastslow | -tab metronome -sheet metroFastSlow
+metro_song | -tab metronome -sheet metroSong
+metro_randommute | -tab metronome -sheet metroRandomMute
+metro_presets | -tab metronome -metroDemo -sheet metroPresets
+metro_sounds | -tab metronome -sheet metroSounds
+metro_timer | -tab metronome -sheet metroTimer
+metro_rhythm | -tab metronome -sheet metroRhythm
+metro_playcheck | -tab metronome -sheet playCheck
+metro_playcheck_summary | -tab metronome -sheet playCheckSummary
+fret_position | -tab fretboard
+fret_demo | -tab fretboard -fretDemo
+fret_whole | -tab fretboard -neckWhole
+fret_scale | -tab fretboard -sheet fretScale
+fret_view | -tab fretboard -sheet fretView
+fret_play | -tab fretboard -sheet fretPlay
+fret_chord | -tab fretboard -fretMode chord
+fret_chord_none | -tab fretboard -fretMode chordNone -chordLibrary
+fret_search | -tab fretboard -fretMode search
+fret_search_results | -tab fretboard -fretMode search -sheet searchResults
+fret_progression | -tab fretboard -fretMode progression
+fret_progression_sheet | -tab fretboard -fretMode progression -sheet fretProgression
+fret_progression_chord | -tab fretboard -fretMode progression -sheet progressionChord
+fret_path | -tab fretboard -fretMode path
+fret_path1 | -tab fretboard -fretMode path1
+fret_path_sheet | -tab fretboard -fretMode path -sheet fretPath
+fret_chords_from_note | -tab fretboard -sheet chordsFromNote
+fret_scale_from_note | -tab fretboard -sheet scaleFromNote
+fret_scale_builder | -tab fretboard -sheet scaleBuilder
+fret_chord_builder | -tab fretboard -sheet chordBuilder
+fret_user_scales | -tab fretboard -sheet userScales
+inst_tunings | -template g6-standard-e -tuningsDemo -tab tuner -tunerDemo flat -sheet tunings
+inst_tunings_add | -template g6-standard-e -tuningsDemo -tab tuner -tunerDemo flat -sheet tuningsAdd
+inst_tuning_editor | -template g6-standard-e -tuningsDemo -tab tuner -tunerDemo flat -sheet tuningEditor
+inst_library | -template g6-standard-e -tuningsDemo -tab tuner -tunerDemo flat -sheet libraryDrop
+inst_template_card | -tab tuner -sheet templateCard
+inst_generator | -template g6-standard-e -tuningsDemo -tab tuner -tunerDemo flat -sheet generatorDropC
+inst_instrument | -template g6-standard-e -tuningsDemo -tab tuner -tunerDemo flat -sheet instrument
+inst_rebuild | -tab tuner -sheet instrumentRebuild
+inst_strings | -tab tuner -sheet instrumentStrings
+inst_last_one | -template ukulele-standard -tab tuner -tunerDemo flat -sheet tuningsLastOne
+inst_delete | -template g6-standard-e -tuningsDemo -tab tuner -tunerDemo flat -sheet tuningsDelete
+inst_unsaved | -template g6-standard-e -tuningsDemo -tab tuner -tunerDemo flat -sheet tuningUnsaved
+settings | -tab tuner -showSettings
+practice | -tab practice
+practice_history | -tab practice -playCheckHistoryDemo
+practice_session | -tab practice -sheet session
+practice_trainer_name | -tab practice -sheet trainerName
+practice_trainer_play | -tab practice -sheet trainerPlay
